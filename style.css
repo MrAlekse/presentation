@@ -145,3 +145,44 @@ html, body {
 .references a:hover {
   text-decoration: underline;
 }
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;     /* stack items vertically */
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;               /* allow scroll if needed */
+    padding: 15px;
+  }
+
+  /* QR code on top-left but smaller */
+  .qr-code {
+    position: static;           /* no fixed position */
+    align-self: flex-start;     /* stays on the left */
+    width: 70px;
+    margin-bottom: 10px;
+  }
+
+  /* Presentation takes full width */
+  .presentation {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    padding: 20px;
+  }
+
+  /* Image below presentation, centered, full width */
+  .mead-img {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px 0;
+  }
+
+  /* References at the bottom but not fixed (so they don't overlap) */
+  .references {
+    position: static;
+    margin-top: 20px;
+    transform: none;
+    text-align: center;
+  }
+}
