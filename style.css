@@ -10,9 +10,10 @@ body {
 }
 
 .presentation {
-  flex: 1;                
-  max-width: 900px;       
-  margin-left: 50px;      
+   flex: 1;
+  max-width: 900px;
+  margin-left: 150px;     
+  margin-right: 30px;
   background: var(--card);
   border-radius: 15px;
   padding: 30px;
@@ -63,16 +64,19 @@ button:hover {
   background: #000000;
 }
 .mead-img {
-  width: 250px;
-  border-radius: 10px;
-  margin-right: 50px;     
+  width: 350px;         
+  border-radius: 12px;
+  margin-right: 50px;
   object-fit: cover;
 }
 .qr-code {
-  width: 150px;
+   position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 100px;          
   border-radius: 10px;
-  margin-left: 30px;
   object-fit: cover;
+  z-index: 1000; 
 }
 
 :root {
