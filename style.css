@@ -65,19 +65,16 @@ button:hover {
 .mead-img {
   width: 250px;
   border-radius: 10px;
-  margin-right: 50px;     /* spacing from right */
+  margin-right: 50px;     
   object-fit: cover;
 }
 .qr-code {
-      position: fixed;
-      left: 30px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 150px;
-      border-radius: 10px;
-      justify-content: right;
+  width: 150px;
+  border-radius: 10px;
+  margin-left: 30px;
+  object-fit: cover;
 }
-/* --- Theme tokens --- */
+
 :root {
   --bg: #ffffff;
   --fg: #111827;
@@ -126,4 +123,21 @@ html, body {
   padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0,0,0,0);
   white-space: nowrap; border: 0;
+}
+.references {
+  position: fixed;
+  bottom: 20px;   
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.references a {
+  margin: 0 10px;
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 14px;
+}
+.references a:hover {
+  text-decoration: underline;
 }

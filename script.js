@@ -20,9 +20,8 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-// --- Theme manager ---
 (function () {
-  const STORAGE_KEY = 'theme'; // 'light' | 'dark' | 'system'
+  const STORAGE_KEY = 'theme'; 
   const selectEl = document.getElementById('theme-select');
   const media = window.matchMedia('(prefers-color-scheme: dark)');
   const root = document.documentElement;
@@ -41,26 +40,25 @@ function prevSlide() {
     } else if (mode === 'dark') {
       root.classList.add('dark');
     } else {
-      // system
+      
       root.classList.toggle('dark', media.matches);
     }
   }
 
-  // Initialize
+  
   const initial = getSavedMode();
   applyTheme(initial);
 
-  // Set select UI if present
+ 
   if (selectEl) {
     selectEl.value = initial;
     selectEl.addEventListener('change', () => {
-      const mode = selectEl.value; // 'light' | 'dark' | 'system'
+      const mode = selectEl.value; 
       setSavedMode(mode);
       applyTheme(mode);
     });
   }
 
-  // React to system changes only when in "system" mode
   media.addEventListener('change', () => {
     if (getSavedMode() === 'system') applyTheme('system');
   });
