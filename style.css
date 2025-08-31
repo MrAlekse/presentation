@@ -1,20 +1,19 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f9;
+   font-family: Arial, sans-serif;
+  background: var(--bg);
   margin: 0;
-  margin-left: 50px;
-  margin-right: 50px;
   padding: 0;
   display: flex;
-  justify-content: left;
+  justify-content: space-between; 
   align-items: center;
   height: 100vh;
 }
 
 .presentation {
-  width: 80%;
-  max-width: 900px;
-  background: white;
+  flex: 1;                
+  max-width: 900px;       
+  margin-left: 50px;      
+  background: var(--card);
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -64,13 +63,10 @@ button:hover {
   background: #000000;
 }
 .mead-img {
-      position: fixed;
-      right: 30px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 250px;
-      border-radius: 10px;
-      justify-content: right;
+  width: 250px;
+  border-radius: 10px;
+  margin-right: 50px;     /* spacing from right */
+  object-fit: cover;
 }
 .qr-code {
       position: fixed;
@@ -98,20 +94,17 @@ button:hover {
   --border: #1f2937;
 }
 
-/* Apply tokens */
 html, body {
   background: var(--bg);
   color: var(--fg);
   transition: background-color .2s ease, color .2s ease;
 }
 
-/* Example usage for existing elements (optional) */
 .slide, .presentation, .card {
   background: var(--card);
   border: 1px solid var(--border);
 }
 
-/* Toggle placement */
 .theme-toggle {
   position: fixed;
   top: 12px;
@@ -127,7 +120,6 @@ html, body {
   color: var(--fg);
 }
 
-/* a11y helper */
 .sr-only {
   position: absolute;
   width: 1px; height: 1px;
